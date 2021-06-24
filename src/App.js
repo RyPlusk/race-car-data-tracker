@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Button, Form, Container, Header } from 'semantic-ui-react';
 import axios from 'axios';
 import './App.css';
