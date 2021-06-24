@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Form, Container, Header } from 'semantic-ui-react';
+//import { Button, Form, Container, Header } from 'semantic-ui-react';
 import axios from 'axios';
 import './App.css';
-
+/*
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -58,3 +58,4 @@ export default class App extends Component {
     )
   }
 }
+*/
