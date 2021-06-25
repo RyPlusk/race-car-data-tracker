@@ -8,10 +8,17 @@ export default class App extends Component {
     super(props)
   
     this.state = {
-       name: '',
-       age: '',
-       salary: '',
-       hobby: ''
+       date: '',
+       airTemp: '',
+       trackTemp: '',
+       eventType: '',
+       backRightTire: '',
+       frontRightTire: '',
+       backLeftTire: '',
+       frontLeftTire: '',
+       trackCondition: '',
+       vehicleWeight: '',
+       bestLapTime: ''
     }
   }
 
@@ -30,26 +37,64 @@ export default class App extends Component {
   }
   
   render() {
-    const { name, age, salary, hobby } = this.state;
+    const { date,
+    airTemp,
+    trackTemp,
+    eventType,
+    backRightTire,
+    frontRightTire,
+    backLeftTire,
+    frontLeftTire,
+    trackCondition,
+    vehicleWeight,
+    bestLapTime } = this.state;
     return (
       <Container fluid className="container">
         <Header as='h2'>React Google Sheets!</Header>
         <Form className="form" onSubmit={this.submitHandler}>
           <Form.Field>
-            <label>Name</label>
-            <input placeholder='Enter your name' type="text" name = "name" value = {name} onChange={this.changeHandler}/>
+            <label>Date</label>
+            <input placeholder='Enter the Date' type="text" name = "date" value = {date} onChange={this.changeHandler}/>
           </Form.Field>
           <Form.Field>
-            <label>Age</label>
-            <input placeholder='Enter your age' type="number" name = "age" value = {age} onChange={this.changeHandler}/>
+            <label>Air Temp</label>
+            <input placeholder='Enter the Air Temp' type="number" name = "airTemp" value = {airTemp} onChange={this.changeHandler}/>
           </Form.Field>
           <Form.Field>
-            <label>Salary</label>
-            <input placeholder='Enter your salary' type="number" name = "salary" value = {salary} onChange={this.changeHandler}/>
+            <label>Track Temp</label>
+            <input placeholder='Enter the Track Temp' type="number" name = "trackTemp" value = {trackTemp} onChange={this.changeHandler}/>
           </Form.Field>
           <Form.Field>
-            <label>Hobby</label>
-            <input placeholder='Enter your hobby' type="text" name = "hobby" value = {hobby} onChange={this.changeHandler}/>
+            <label>Event Type</label>
+            <input placeholder='Enter the Event Type' type="text" name = "eventType" value = {eventType} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Back Right Tire</label>
+            <input placeholder='Back Right Tire Pressure' type="number" name = "backRightTire" value = {backRightTire} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Front Right Tire</label>
+            <input placeholder='Front Right Tire PRessure' type="number" name = "frontRightTire" value = {frontRightTire} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Back Left Tire</label>
+            <input placeholder='Back Left Tire Pressure' type="number" name = "backLeftTire" value = {backLeftTire} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Front Left Tire</label>
+            <input placeholder='Front Left Tire Pressure' type="number" name = "frontLeftTire" value = {frontLeftTire} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Track Condition</label>
+            <input placeholder='Enter the Track Condition' type="text" name = "trackCondition" value = {trackCondition} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Vehicle Weight(in lbs)</label>
+            <input placeholder='Enter the Vehicle Weight' type="number" name = "vehicleWeight" value = {vehicleWeight} onChange={this.changeHandler}/>
+          </Form.Field>
+          <Form.Field>
+            <label>Best Lap Time</label>
+            <input placeholder='Enter the Best Lap Time' type="text" name = "bestLapTime" value = {bestLapTime} onChange={this.changeHandler}/>
           </Form.Field>
           
           <Button color="blue" type='submit'>Submit</Button>
