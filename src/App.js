@@ -50,7 +50,7 @@ export default class App extends Component {
     bestLapTime } = this.state;
     return (
       <Container fluid className="container">
-        <Header as='h2'>React Google Sheets!</Header>
+        <Header as='h2'>Race Data Tracker!</Header>
         <Form className="form" onSubmit={this.submitHandler}>
           <Form.Field>
             <label>Date</label>
